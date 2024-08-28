@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Agglomerator++ for interpretable neural networks.">
+  <meta name="keywords" content="Agglomerator, Agglomerator++">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agglomerator++</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-PMXG52KP"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'GTM-PMXG52KP');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="http://mmlabsites.disi.unitn.it/">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://github.com/mmlab-cv/">
+            GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Agglomerator++: interpretable part-whole hierarchies and latent space representations in
+            neural networks</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=a4CmqMYAAAAJ&hl=it">Zeno Sambugaro</a><sup>1,2</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.it/citations?user=r8BzAfcAAAAJ&hl=en">Nicola Garau</a><sup>1,2</sup>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=I6vOrqkAAAAJ&hl=it&oi=ao">Niccolò Bisagno</a><sup>1,2</sup>,
+            <span class="author-block">
+              <a href="https://scholar.google.it/citations?user=mR1GK28AAAAJ&hl=en">Nicola Conci</a><sup>1,2</sup>,
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>University of Trento,</span>
+            <span class="author-block"><sup>2</sup>CNIT</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://mmlab-cv.github.io/Agglomeratorplusplus/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper (Coming soon)</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://mmlab-cv.github.io/Agglomeratorplusplus/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="./static/images/teaser_new.png"
+            alt="Teaser image."/>
+      <h2 class="subtitle has-text-centered">
+        Deep neural networks achieve outstanding results in a large variety of tasks, often outperforming human experts. However, a known limitation of current neural architectures is the poor accessibility to understand and interpret the network response to a given input. 
+In this paper, we want to make a step forward towards interpretability in neural networks, providing new tools to interpret their behavior.
+We present <span class="dnerf">Agglomerator++</span>, a framework capable of providing a representation of part-whole hierarchies from visual cues and organizing the input distribution matching the conceptual-semantic hierarchical structure between classes.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Deep neural networks achieve outstanding results in a large variety of tasks, often outperforming human experts. However, a known limitation of current neural architectures is the poor accessibility in understanding and interpreting the network's response to a given input. This is directly related to the huge number of variables and the associated non-linearities of neural models, which are often used as black boxes. This lack of transparency, particularly in crucial areas like autonomous driving, security, and healthcare, can trigger skepticism and limit trust, despite the networks' high performance.
+          </p>
+          <p>
+            In this work, we want to advance the interpretability in neural networks. We present <span class="dnerf">Agglomerator++</span>, a framework capable of providing a representation of part-whole hierarchies from visual cues and organizing the input distribution to match the conceptual-semantic hierarchical structure between classes. We evaluate our method on common datasets, such as SmallNORB, MNIST, FashionMNIST, CIFAR-10, and CIFAR-100, showing that our solution delivers a more interpretable model compared to other state-of-the-art approaches.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <!-- PreTraining. -->
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-3">Pretraining</h2>
+          <img src="./static/images/pretrain.png"
+            alt="Pretraining."/>
+            During the pre-training phase, a masked input is given to the network. The reconstruction loss <i>𝓛<sub>Recon</sub></i> depends on how well the masked patches of the input image are reconstructed. The loss is attached to level L<sub>t</sub><sup>1</sup> because the network presents more detailed features at a lower level, while the representation becomes more abstract at higher levels, making them less suitable for reconstructing the input image. At the same time, enforcing the minimization of the regularisation losses <i>𝓛<sub>d</sub></i> on the last level L<sub>t</sub><sup>K</sup> encourages the network to display more definite <i>islands of agreement</i> at higher levels.
+        </div>
+      </div>
+      <!--/ PreTraining. -->
+    </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <!-- Training. -->
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-3">Training for image classification</h2>
+          <img src="./static/images/classification.png"
+            alt="Training."/>
+            During the training phase, image samples are fed through the network to obtain their neural representation. The information is routed for at least 2K iterations to ensure that it is propagated through the network from the bottom level upward thanks to the bottom-up networks and back downward thanks to the top-down networks. The classification loss <i>𝓛<sub>2</sub></i> is associated with the last level because the higher-level features are more suitable for the classification task.
+        </div>
+      </div>
+      <!--/ Training. -->
+    </div>
+</section>
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns">
+      <!-- Architecture. -->
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-3">Architecture</h2>
+          <img src="./static/images/architecture_new.png" alt="Architecture."/>
+          <p>
+            Architecture of our Agglomerator++ model (center) with information routing (left) and detailed structure of building elements (right). Each <i>cube</i> represents a level <i>l<sub>t</sub><sup>k</sup></i>. <b>Top:</b> (a) legend for the arrows in the figure, representing the top-down network <i>N<sub>TD</sub>(l<sub>t-1</sub><sup>k+1</sup>)</i> and the positional embedding <i>p(h,w)</i>, the bottom-up network <i>N<sub>BU</sub>(l<sub>t-1</sub><sup>k-1</sup>)</i>, attention mechanism <i>A(L<sub>t-1</sub><sup>k</sup>)</i> and time step <i>t</i>. 
+<b>Left:</b> (b) Contribution to the value of level <i>l<sub>t</sub><sup>k</sup></i> given by <i>l<sub>t-1</sub><sup>k</sup></i>, <i>N<sub>TD</sub>(l<sub>t-1</sub><sup>k+1</sup>)</i> and <i>N<sub>BU</sub>(l<sub>t-1</sub><sup>k-1</sup>)</i>. (c) The attention mechanism <i>A(L<sub>t-1</sub><sup>k</sup>)</i> facilitates information sharing between <i>l<sub>t-1</sub><sup>k</sup></i> ∈ <i>L<sub>t-1</sub><sup>k</sup></i>. The positional embedding <i>p(h,w)</i> is different for each column <i>C(h,w)</i>. All levels belonging to the same hyper-column <i>C(h,w)</i> share the positional embedding <i>p(h,w)</i>. <b>Center:</b> bottom to top, the architecture consists of the tokenizer module, followed by the columns <i>C(h,w)</i>, with each level <i>l<sub>t</sub><sup>k</sup></i> connected to the neighbors with <i>N<sub>TD</sub>(l<sub>t-1</sub><sup>k+1</sup>)</i> and <i>N<sub>BU</sub>(l<sub>t-1</sub><sup>k-1</sup>)</i>. <b>Right:</b> (d) Structure of the top-down network <i>N<sub>TD</sub>(l<sub>t-1</sub><sup>k+1</sup>)</i> and the bottom-up network <i>N<sub>BU</sub>(l<sub>t-1</sub><sup>k-1</sup>)</i>.
+          </p>
+        </div>
+      </div>
+      <!--/ Architecture. -->
+      <!-- Latent Spaces. -->
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-3">Latent Spaces</h2>
+          <img src="./static/images/latent.png" alt="Latent Spaces."/>
+          <p>
+            The 2D latent space representation of multiple methods trained on the CIFAR-10 dataset through PCA is illustrated. The PCA reduces data from multidimensional to 2D. The legend (f) classifies samples into <i>Vehicles</i> and <i>Animals</i> following the WordNet hierarchy (Miller, 1995). All methods (a, b, c, d, e) cluster samples between super-classes. The MLP-based methods (c, d) offer superior super-class separation, while placing similar samples together. Our method (c) optimizes inter-class and intra-class separability. The overlap percentage <i>O</i> denotes areas prone to severe hierarchical errors (Bertinetto, 2020).
+          </p>
+        </div>
+      </div>
+      <!--/ Latent Spaces. -->
+    </div>
+  </div>
+</section>
+
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <!-- Islands. -->
+      <div class="column">
+        <div class="content">
+          <h2 class="title is-3">Islands of agreement</h2>
+          <img src="./static/images/islands.png"
+            alt="Training."/>
+            Illustration of the evolving islands of agreement at varying <i>K</i> levels for MNIST and CIFAR-10 dataset samples. Displaying agreement vectors for each patch at each <i>k</i> level post 300 epochs of pre-training. Level <i>k=1</i> functions akin to a feature extractor with minimal neighbor agreement. Lastly, at level <i>k=5</i>, two islands surface representing the object and the background.
+        </div>
+      </div>
+      <!--/ Islands. -->
+    </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>Coming soon
+</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./static/videos/nerfies_paper.pdf">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            We thank the authors of <a href="https://nerfies.github.io/">Nerfies</a> that kindly open sourced the template of this website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
